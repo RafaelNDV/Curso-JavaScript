@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body{
+            background: linear-gradient(to top, rgba(255, 166, 0, 0.767), rgba(255, 255, 0, 0.671)); 
+            height: 100vh;
+            width: 100vw;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+        }
+        section{
+            background-color: white;
+            width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        section p{
+            text-align: center;
+            margin: 0px 0px 15px 0px;
+        }
+        img{
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+            height: 250px;
+            outline: 3px solid  black;
+            border: 3px solid white;
+        }
+        footer{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="h1">Hora do Dia</h1>
+        <section>
+            <p>Agora são <strong id="horario">inválido</strong> horas.</p>
+            <img id="foto" src="imagens/Amanhece.jpeg.png" alt="Imagem da hora">
+        </section>
+    </main>
+    <footer id="footer">
+        <p>© Curso em Vídeo</p>
+    </footer>
+    <script>
+        let agora = new Date()
+        let foto = document.getElementById('foto')
+        let hora = agora.getHours()
+        let minuto = agora.getMinutes()
+        let horario = document.getElementById('horario')
+        horario.innerHTML = `${hora}:${minuto}`
+        if(hora > 6 && hora <= 12){
+
+        }else if(hora > 12 && hora < 18){
+            document.body.style.backgroundImage = 'linear-gradient(to top, orange, red)'
+            foto.setAttribute("src", "imagens/tarde.png")
+        }else{
+            document.body.style.backgroundImage = 'linear-gradient(to top, rgb(78, 78, 78), black)'
+            h1.style.color = 'white'
+            footer.style.color ='white'
+            foto.setAttribute("src", "imagens/noite.png")
+        }
+    </script>
+</body>
+</html>
