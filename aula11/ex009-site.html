@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+</head>
+<body>
+    <h1>Verificando a sua nacionalidade</h1>
+    <p>Digite o seu país: <input type="text" id="txtnal"></p>
+    <input type="button" value="Verificar" onclick="clique()">
+    <div id="res"></div>
+    <script>
+        function clique(){
+            let nal = document.getElementById('txtnal').value.toUpperCase()
+            let res = document.getElementById('res')
+            if(nal == 'BRASIL'){
+                res.innerHTML = '<p>Parabéns você é brasileiro</p>'
+            }else{
+                res.innerHTML = '<p>Parabés você é estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
