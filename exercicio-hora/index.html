@@ -60,7 +60,13 @@
         let hora = agora.getHours()
         let minuto = agora.getMinutes()
         let horario = document.getElementById('horario')
-        horario.innerHTML = `${hora}:${minuto}`
+        if(minuto < 10){
+            horario.innerHTML = `${hora}:0${minuto}`
+        }else{
+            horario.innerHTML = `${hora}:${minuto}`
+        }
+
+        
         if(hora > 6 && hora <= 12){
 
         }else if(hora > 12 && hora < 18){
