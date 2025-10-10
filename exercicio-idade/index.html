@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body, html{
+            background-color: rgb(2, 174, 226);
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            margin: 20px;
+        }
+        section{
+            background-color: white;
+            margin: auto;
+            width: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.801);
+        }
+        section p{
+            margin: 15px 0px 15px 0px;
+        }
+        section #msg{
+            text-align: center;
+            font-size: 1.2em;
+        }
+        img{
+            display: block;
+            border-radius: 50%;
+            margin: auto;
+            border: 3px solid white;
+            outline: 3px solid black;
+            height: 250px;
+        }
+        footer{
+            text-align: center;
+            color: white;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <section>
+        <p>Ano de nascimento: <input type="number" name="ano" id="ano"></p>
+        <p>Sexo: <input type="radio" name="escolha" id="mas" value="1"> <label for="mas">Masculino</label>  <input type="radio" name="escolha" id="fem" value="2"> <label for="fem">Feminino</label></p>
+        <input id="btn" type="button" value="Verificar" onclick="clique()">
+        <p id="msg">Detectamos <strong id="s"></strong> com <strong id="i"></strong> anos de idade.</p>
+        <img id="foto" src="imagens/tarde.png" alt="Pessoa">
+    </section>
+    <footer>
+        <p>© Curso em Vídeo</p>
+    </footer>
+    
+    <script>
+        let data = new Date
+        let anoAtual = data.getFullYear()
+        let msgAno = document.getElementById('i')
+        let msgSexo = document.getElementById('s')
+        function clique(){
+            let anoNascimento = Number(document.getElementById('ano').value)
+            let idade = anoAtual - anoNascimento
+            if(idade > 0 && idade <= 150){
+                msgAno.innerHTML = `${idade}`
+            }else{
+                msgAno.innerHTML = ``
+            }
+            
+
+            let nsexo = document.querySelector('input[name="escolha"]:checked').value
+            if(nsexo == '1'){
+                msgSexo.innerHTML = `Homem`
+                if(idade <= 12 && idade > 0){
+                    foto.setAttribute("src", "imagens/criança-M.png")
+                }else if(idade < 18 && idade > 0){
+                    foto.setAttribute("src", "imagens/adolescente-M.png")
+                }else if(idade < 60 && idade > 0){
+                    foto.setAttribute("src", "imagens/adulto-M.png")
+                }else if(idade < 150 && idade > 0){
+                    foto.setAttribute("src", "imagens/idoso-M.png")
+                }else{
+                    window.alert('Idade inválida')
+                }
+            }else{
+                msgSexo.innerHTML = `Mulher`
+                if(idade <= 12 && idade > 0){
+                    foto.setAttribute("src", "imagens/criança-F.png")
+                }else if(idade < 18 && idade > 0){
+                    foto.setAttribute("src", "imagens/adolescente-F.png")
+                }else if(idade < 60 && idade > 0){
+                    foto.setAttribute("src", "imagens/adulto-F.png")
+                }else if(idade < 150 && idade > 0){
+                    foto.setAttribute("src", "imagens/idoso-F.png")
+                }else{
+                    window.alert('Idade inválida')
+                }
+            }
+        }
+    </script>
+</body>
+</html>
