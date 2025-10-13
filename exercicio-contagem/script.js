@@ -7,7 +7,7 @@ function contar(){
     for(let i = (inicio + passo); i <= fim; i = i + passo){
         res.innerHTML += `   ${i}   >`
     }
-    res.innerHTML += '🏁'
+    res.innerHTML += ' 🏁'
     
     
     //res.innerHTML = `${inicio} ${fim} ${passo}`
