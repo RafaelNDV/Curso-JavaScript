@@ -52,4 +52,10 @@ footer{
     section{
         width: 90%;
     }
+    #caixa{
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+        gap: 10px;
+    }
 }
