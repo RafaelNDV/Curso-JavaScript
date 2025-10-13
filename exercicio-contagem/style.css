@@ -48,3 +48,8 @@ footer{
     font-size: 1.3em;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.452);
 }
+@media screen and (max-width: 430px){
+    section{
+        max-width: 90%;
+    }
+}
