@@ -53,12 +53,14 @@ footer{
         width: 90%;
     }
     #caixa{
-        display: flex;
+        display: grid;
         width: 100%;
-        flex-flow: row wrap;
+        grid-template-columns: 20% 40% 35%;
         gap: 10px;
     }
-    #btn{
-        align-content: center;
+    label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
