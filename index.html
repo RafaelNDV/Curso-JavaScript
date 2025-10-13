@@ -14,6 +14,7 @@
             height: 100vh;
             width: 100vw;
             background: linear-gradient(to top, blue, blueviolet);
+            background-attachment: fixed;
         }
         h1{
             padding: 30px;
@@ -33,6 +34,9 @@
             padding: 20px;
             background-color: rgb(56, 55, 55);
             border-radius: 10px;
+        }
+        section#dois{
+            margin-bottom: 30px;
         }
         div{
             display: flex;
@@ -55,18 +59,33 @@
         a:hover{
             background-color: rgb(117, 37, 192);
         }
+        @media screen and (max-width: 430px){
+            a{
+                min-width: 10px;
+            }
+            section#um div{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            section#dois div{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Meu Curso de JS</h1>
-    <section>
+    <section id="um">
         <h2>Atividades / Projetos</h2>
         <div>
             <a href="exercicio-hora/index.html">Exercicio da hora</a>
             <a href="exercicio-idade/index.html">Exercicio da idade</a>
         </div>
     </section>
-    <section>
+    <section id="dois">
         <h2>Aulas</h2>
         <div>
             <a href="aula04/ex001.html">Aula04</a>
