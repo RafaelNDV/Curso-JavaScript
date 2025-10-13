@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Instituto Lucimário Caitano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6a14f.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background: linear-gradient(135deg, #0D0D0D, #8C1C1C);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Partículas de fundo */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      animation: float 10s infinite ease-in-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .login-card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      width: 380px;
+      color: #F2F2F2;
+      text-align: center;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-card h1 {
+      margin-bottom: 10px;
+      color: #F2F2F2;
+    }
+
+    .login-card p {
+      color: #ccc;
+      font-size: 0.9em;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .input-group i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 12px 12px 45px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      outline: none;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .input-group input:focus {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 10px #078C36;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #078C36, #D92323);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(217, 35, 35, 0.4);
+    }
+
+    .photo {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .photo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #078C36;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .footer-text {
+      margin-top: 25px;
+      font-size: 0.8em;
+      color: #aaa;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Partículas aleatórias -->
+  <div class="circle" style="width: 80px; height: 80px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+  <div class="circle" style="width: 120px; height: 120px; top: 70%; left: 60%; animation-delay: 2s;"></div>
+  <div class="circle" style="width: 60px; height: 60px; top: 50%; left: 80%; animation-delay: 4s;"></div>
+
+  <!-- Card de Login -->
+  <div class="login-card">
+    <h1>Instituto Lucimário Caitano</h1>
+    <p>Entre com suas credenciais</p>
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Usuário" id="usuario">
+    </div>
+    <div class="input-group">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Senha" id="senha">
+    </div>
+    <button onclick="entrar()">Entrar</button>
+
+    <div class="photo">
+      <img src="../android-chrome-192x192.png" alt="Foto do Instituto">
+      <span>Bem-vindo ao sistema</span>
+    </div>
+
+    <div class="footer-text">© 2025 Instituto Lucimário Caitano</div>
+  </div>
+
+  <script>
+    function entrar() {
+      const user = document.getElementById('usuario').value.trim();
+      const pass = document.getElementById('senha').value.trim();
+
+      if (user === "" || pass === "") {
+        alert("Preencha todos os campos!");
+      } else {
+        alert(`Bem-vindo, ${user}! (aqui entraria a verificação de login no backend)`);
+      }
+    }
+  </script>
+</body>
+</html>

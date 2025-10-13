@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Instituto Lucimário Caitano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6a14f.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #053616 40%, #078C36 100%);
+      overflow: hidden;
+    }
+
+    .login-container {
+      background-color: #F2F2F2;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+      width: 380px;
+      padding: 40px;
+      text-align: center;
+      transition: all 0.3s ease;
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo img {
+      background-color: rgb(131, 243, 131);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      color: white;
+      font-size: 2rem;
+      box-shadow: 0 0 15px rgba(7, 140, 54, 0.3);
+    }
+
+    h1 {
+      color: #0D0D0D;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .input-group i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #078C36;
+      font-size: 1rem;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 12px 12px 38px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      font-size: 0.95rem;
+      background-color: #fff;
+      color: #333;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: #078C36;
+      box-shadow: 0 0 8px rgba(7, 140, 54, 0.2);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #078C36;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #056c2a;
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .footer span {
+      color: #D92323;
+      font-weight: 600;
+    }
+
+    /* Responsivo */
+    @media (max-width: 450px) {
+      body {
+        background: #078C36;
+        padding: 20px;
+      }
+      .login-container {
+        width: 100%;
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo"><img src="../android-chrome-192x192.png" alt="logo"></div>
+    <h1>Instituto Lucimário Caitano</h1>
+    <p>Faça login para acessar o sistema</p>
+
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" id="usuario" placeholder="Usuário">
+    </div>
+    <div class="input-group">
+      <i class="fas fa-lock"></i>
+      <input type="password" id="senha" placeholder="Senha">
+    </div>
+
+    <button onclick="entrar()">Entrar</button>
+
+    <div class="footer">
+      © 2025 <span>Instituto Lucimário Caitano</span>
+    </div>
+  </div>
+
+  <script>
+    function entrar() {
+      const user = document.getElementById('usuario').value.trim();
+      const pass = document.getElementById('senha').value.trim();
+
+      if (!user || !pass) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      alert(`Bem-vindo(a), ${user}! (aqui entraria a lógica de autenticação)`);
+    }
+  </script>
+</body>
+</html>

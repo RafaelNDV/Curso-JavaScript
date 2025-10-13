@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Instituto Lucimário Caitano</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0D0D0D;
+      display: flex;
+      height: 100vh;
+      color: #F2F2F2;
+    }
+
+    /* Layout geral dividido em duas colunas */
+    .left-panel {
+      flex: 1;
+      background: linear-gradient(135deg, #078C36, #0D0D0D);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .left-panel h1 {
+      font-size: 2.5rem;
+      color: #F2F2F2;
+      margin-bottom: 20px;
+    }
+
+    .left-panel p {
+      font-size: 1.1rem;
+      color: #d1d1d1;
+      max-width: 350px;
+    }
+
+    /* Formulário */
+    .right-panel {
+      flex: 1;
+      background-color: #F2F2F2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .login-box {
+      background-color: #fff;
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    .login-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .login-box h2 {
+      color: #0D0D0D;
+      margin-bottom: 30px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .login-box input:focus {
+      border-color: #078C36;
+      outline: none;
+    }
+
+    .login-box button {
+      width: 100%;
+      background-color: #078C36;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .login-box button:hover {
+      background-color: #056b2a;
+    }
+
+    .login-box .error {
+      color: #D92323;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+      .left-panel {
+        display: none;
+      }
+      .right-panel {
+        background: linear-gradient(135deg, #F2F2F2, #fff);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-panel">
+    <h1>Instituto Lucimário Caitano</h1>
+    <p>Bem-vindo(a)! Faça login para acessar o sistema interno do instituto.</p>
+  </div>
+
+  <div class="right-panel">
+    <div class="login-box">
+      <!-- Espaço opcional para foto ou logo -->
+      <img src="../android-chrome-192x192.png" alt="Logo Instituto">
+      <h2>Entrar no Sistema</h2>
+
+      <form id="loginForm">
+        <input type="text" id="usuario" placeholder="Usuário">
+        <input type="password" id="senha" placeholder="Senha">
+        <button type="submit">Entrar</button>
+        <p class="error" id="erro">Usuário ou senha incorretos!</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Validação simples (pode substituir pela integração real depois)
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const usuario = document.getElementById('usuario').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+      const erro = document.getElementById('erro');
+
+      if (usuario === "" || senha === "") {
+        erro.textContent = "Preencha todos os campos!";
+        erro.style.display = "block";
+      } else if (usuario === "admin" && senha === "1234") {
+        erro.style.display = "none";
+        alert("Login bem-sucedido! (aqui entraria a navegação do sistema)");
+        // window.location.href = "painel.html"; // exemplo para futura integração
+      } else {
+        erro.textContent = "Usuário ou senha incorretos!";
+        erro.style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

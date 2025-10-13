@@ -15,6 +15,7 @@ h1{
     color: white;
     text-align: center;
     margin: 30px;
+    text-shadow: 2px 2px 5px black;
 }
 section{
      background-color: white;
@@ -22,6 +23,7 @@ section{
      border-radius: 20px;
      padding: 20px;
      margin: auto;
+     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.678);
 }
 input{
     padding: 3px;
@@ -47,6 +49,7 @@ footer{
     color: white;
     text-align: center;
     margin: 20px;
+    text-shadow: 2px 2px 5px black;
 }
 @media screen and (max-width: 430px){
     section{
