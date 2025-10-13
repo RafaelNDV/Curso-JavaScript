@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super contador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Vamos contar</h1>
+    <section>
+        <div>
+            <form action="cadastro.php">
+                <p>
+                    <label for="inicio">Inicio: </label>
+                    <input type="number" name="inicio" id="inicio" required>
+                </p>
+                <p>
+                    <label for="fim">Fim: </label>
+                    <input type="number" name="fim" id="fim" required>
+                </p>
+                <p>
+                    <label for="passo">Passo: </label>
+                    <input type="number" name="passo" id="passo" required>
+                </p>
+                <p><input type="button" id="btn" value="Contar" onclick="contar()"></p>
+            </form>
+        </div>
+        <div id="res">
+            <p>...</p>
+        </div>
+    </section>
+    <footer>
+        Curso em Vídeo
+    </footer>
+    
+    <script>
+
+    </script>
+</body>
+</html>
