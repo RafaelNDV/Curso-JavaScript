@@ -58,4 +58,7 @@ footer{
         flex-flow: row wrap;
         gap: 10px;
     }
+    #btn{
+        align-content: center;
+    }
 }
