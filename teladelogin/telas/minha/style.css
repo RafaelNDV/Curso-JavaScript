@@ -55,12 +55,14 @@ section{
     width: 90%;
     text-align: center;
     color: gray;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.322);
 }
 #esquerda img{
     height: 20%;
     outline: 3px solid var(--cor2);
     border: 6px solid var(--cor4);
     border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.521);
 }
 #direita{
     width: 100%;
@@ -98,6 +100,8 @@ form div{
     justify-content: space-between;
     padding: 5px;
     align-items: center;
+    border: 2px solid var(--cor2);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
 }
 div label{
     height: 90%;
@@ -121,7 +125,7 @@ div label{
     border: 2px solid var(--cor2);
     outline: 2px solid var(--cor1);
     background-color: var(--cor4);
-    box-shadow: 0 0 10px var(--cor1);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.37);
 }
 div#botao{
     padding: 1px;
@@ -151,6 +155,7 @@ p a{
     font-weight: bold;
     font-size: 1.1em;
     color: var(--cor1);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.178);
 }
 p a:hover{
     color: var(--cor2);
