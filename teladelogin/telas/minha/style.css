@@ -21,11 +21,11 @@ body{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background: linear-gradient(45deg, var(--cor1), var(--cor4));
+    background: linear-gradient(145deg, #3ba766, var(--cor2));
 }
 h1{
     color: var(--cor2);
-    text-shadow: 1px 1px 3px var(--cor1);
+    text-shadow: 2px 2px 2px white;
     font-size: 3em;
 }
 section{
@@ -165,4 +165,8 @@ p a:hover{
     #esquerda{
         width: 100%;
     }
+    body{
+        background: linear-gradient(45deg, var(--cor4), var(--cor1), var(--cor2));
+    }
+    
 }
