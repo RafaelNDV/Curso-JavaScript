@@ -8,19 +8,23 @@ function contar(){
     }else if(passo <= 0){
         window.alert('Passo não pode ser 0 ou negativo, será 1')
         passo = 1
-        res.innerHTML = `${inicio} >`
+        res.innerHTML = `${inicio} > `
         for(let i = (inicio + passo); i <= fim; i = i + passo){
-            res.innerHTML += `   ${i}   >`
+            res.innerHTML += `   ${i}   > `
         }
-        res.innerHTML += ' 🏁'
-    }else{
-        res.innerHTML = `${inicio} >`
-        for(let i = (inicio + passo); i <= fim; i = i + passo){
-            res.innerHTML += `   ${i}   >`
+        res.innerHTML += ' 🏁 '
+    }else if(inicio > fim){
+        res.innerHTML = `${inicio}`
+        for(let i = inicio - passo; i >= fim; i = i - passo){
+            res.innerHTML += ` ${i} > `
         }
-        res.innerHTML += ' 🏁'
+        res.innerHTML += ` 🏁 `
     }
-    
-    
-    //res.innerHTML = `${inicio} ${fim} ${passo}`
+    else{
+        res.innerHTML = `${inicio} > `
+        for(let i = (inicio + passo); i <= fim; i = i + passo){
+            res.innerHTML += `   ${i}   > `
+        }
+        res.innerHTML += ' 🏁 '
+    }
 }
