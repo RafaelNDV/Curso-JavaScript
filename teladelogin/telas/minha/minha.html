@@ -8,10 +8,14 @@
     <script src="https://kit.fontawesome.com/802a537608.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Login</h1>
+    <h1>Instituto Lucimário Caitano</h1>
     <section>
         <div id="esquerda">
-            <h2>Bem vindo!</h2>
+            <img src="android-chrome-192x192.png" alt="logo">
+            <div id="texto">
+                <h2>Bem vindo!</h2>
+                <p>Preencha os dados corretamente para ter acesso ao sistema.</p>
+            </div>
             <form action="login" method="post">
                 <div id="mail">
                     <label for="email"><i class="fa-regular fa-envelope"></i></label>
@@ -19,15 +23,15 @@
                 </div>
                 <div id="enha">
                     <label for="senha"><i class="fa-solid fa-lock"></i></label>
-                    <input type="password" name="senha" id="senha">
+                    <input type="password" name="senha" id="senha" required placeholder="Senha" minlength="8">
                 </div>
-                <div id="botão">
-                    <input type="submit" value="Entrar">
+                <div id="botao">
+                    <input type="submit" id="btn" value="Entrar">
                 </div>
             </form>
+            <p id="links"><a href="#">Cadastrar-se</a><a href="#">Esqueci a senha</a></p>
         </div>
         <div id="direita">
-        
         </div>
     </section>
 </body>

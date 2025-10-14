@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+:root{
+    --cor1: #078C36;
+    --cor2: #165931;
+    --cor3: #6DF2A2;
+    --cor4: #A6FFC9;
+    --cor5: #0D0D0D;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(45deg, var(--cor1), var(--cor4));
+}
+h1{
+    color: var(--cor2);
+    text-shadow: 1px 1px 3px var(--cor1);
+    font-size: 3em;
+}
+section{
+    background-color: white;
+    border-radius: 20px;
+    width: 60%; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 900px;
+    aspect-ratio: 16/9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.616);
+    overflow: hidden;
+    transition: .5s;
+}
+#esquerda{
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor4);
+}
+#esquerda p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 90%;
+    text-align: center;
+    color: gray;
+}
+#esquerda img{
+    height: 20%;
+    outline: 3px solid var(--cor2);
+    border: 6px solid var(--cor4);
+    border-radius: 50%;
+}
+#direita{
+    width: 100%;
+    height: 100%;
+    background-image: url('galera.jpeg');
+    background-size: cover;
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.705);
+}
+#esquerda h2{
+    color: var(--cor1);
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+}
+div#texto{
+    display: flex;
+    width: 80%;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 5px;
+}
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 30%;
+}
+form div{
+    height: 25%;
+    background-color: var(--cor1);
+    border-radius: 8px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+div label{
+    height: 90%;
+    width: 15%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#email, #senha{
+    width: 85%;
+    height: calc(100% + 5px);
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    padding: 5px;
+    border: 2px solid var(--cor1);
+}
+div#botao{
+    padding: 1px;
+}
+#btn{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--cor2);
+    background-color: var(--cor3);
+    color: var(--cor5);
+    font-weight: bold;
+    font-size: .9em;
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: var(--cor1);
+}
+#esquerda > #links{
+    display: flex;
+    width: 80%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+p a{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--cor2);
+}
+p a:hover{
+    color: var(--cor5);
+}
+@media screen and (max-width: 900px){
+    h1{
+        display: none;
+    }
+    section{
+        display: flex;
+        min-width: 50%;
+        width: 370px;
+        aspect-ratio: 10/16;
+    }
+    #direita{
+        width: 0%;
+    }
+    #esquerda{
+        width: 100%;
+    }
+}
