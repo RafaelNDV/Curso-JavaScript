@@ -157,7 +157,7 @@ p a:hover{
         display: flex;
         min-width: 50%;
         width: 370px;
-        max-width: 90%;
+        max-width: 85%;
         aspect-ratio: 10/16;
     }
     #direita{
