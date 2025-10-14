@@ -155,9 +155,9 @@ p a:hover{
     }
     section{
         display: flex;
-        min-width: 50%;
-        width: 370px;
-        max-width: 85%;
+        min-width: 0px;
+        width: 80%;
+        max-width: 450px;
         aspect-ratio: 10/16;
     }
     #direita{
