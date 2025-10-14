@@ -2,10 +2,10 @@
 
 :root{
     --cor1: #078C36;
-    --cor2: #165931;
-    --cor3: #6DF2A2;
-    --cor4: #A6FFC9;
-    --cor5: #0D0D0D;
+    --cor2: #045A23;/*#165931*/
+    --cor3: #6DF2A2;/*#6DF2A2*/
+    --cor4: #E8F5E9;/*#A6FFC9*/
+    --cor5: #B71C1C;
 }
 *{
     margin: 0px;
@@ -48,7 +48,7 @@ section{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor4);
+    background: linear-gradient(100deg, #b8dfc8, var(--cor4));
 }
 #esquerda p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -117,6 +117,12 @@ div label{
     padding: 5px;
     border: 2px solid var(--cor1);
 }
+#email:focus, #senha:focus{
+    border: 2px solid var(--cor2);
+    outline: 2px solid var(--cor1);
+    background-color: var(--cor4);
+    box-shadow: 0 0 10px var(--cor1);
+}
 div#botao{
     padding: 1px;
 }
@@ -126,9 +132,9 @@ div#botao{
     border-radius: 8px;
     border: 2px solid var(--cor2);
     background-color: var(--cor3);
-    color: var(--cor5);
+    color: black;
     font-weight: bold;
-    font-size: .9em;
+    font-size: 1em;
 }
 #btn:hover{
     cursor: pointer;
@@ -141,13 +147,17 @@ div#botao{
     justify-content: space-between;
 }
 p a{
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
-    color: var(--cor2);
+    color: var(--cor1);
 }
 p a:hover{
-    color: var(--cor5);
+    color: var(--cor2);
+}
+footer{
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 @media screen and (max-width: 900px){
     h1{
