@@ -24,8 +24,8 @@ body{
     background: linear-gradient(145deg, #3ba766, var(--cor2));
 }
 h1{
-    color: var(--cor2);
-    text-shadow: 2px 2px 2px white;
+    color: var(--cor4);
+    text-shadow: 2px 2px 2px black;
     font-size: 3em;
 }
 section{
@@ -157,6 +157,7 @@ p a:hover{
         display: flex;
         min-width: 50%;
         width: 370px;
+        max-width: 90%;
         aspect-ratio: 10/16;
     }
     #direita{
