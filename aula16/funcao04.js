@@ -1,8 +1,8 @@
 function fatorial(n){
-    let soma = n
-    for(let i = n; i >= 1; i = i - 1){
+    var soma = n
+    for(var i = n; i > 1; i--){
         soma = soma * (i - 1)
     }
-    return i
+    return soma
 }
 console.log(fatorial(5))
