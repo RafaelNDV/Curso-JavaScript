@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Analisador de Números</h1>
+    <section>
+        <p id="pi">Número(entre 1 e 100): <input type="number" name="num" id="num" placeholder="Digite um número" onkeydown="if(event.key==='Enter'){add()}"> <input type="button" value="Adicionar" onclick="add()">
+        </p>
+        <div id="valores">
+             <select size="5" name="nums" id="nums">
+             </select>
+        </div>
+        <input type="button" value="Finalizar" id="fn" onclick="finalizar()">
+        <div id="resultado">
+
+        </div>
+    </section>
+    <footer>
+        &copy; Curso em Vídeo.
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
