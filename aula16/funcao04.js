@@ -1,6 +1,7 @@
 function fatorial(n){
-    for(let i = n; i >= 1; i--){
-        i = i * i - 1
+    let soma = n
+    for(let i = n; i >= 1; i = i - 1){
+        soma = soma * (i - 1)
     }
     return i
 }
